@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Highlight Bold Words on Link Hover</title>
+    <style>
+      /* Style to highlight bold words */
+      .highlight {
+        background-color: blueviolet;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Link that triggers highlighting -->
+    <a href="#" id="highlightLink">Hover over this link</a>
+
+    <!-- Text content with bold words -->
+    <p id="textToHighlight">
+      My name is<strong> Phạm Thành Đạt</strong> I'm<strong>
+        21 years old</strong
+      >
+      .
+    </p>
+
+    <script>
+      // Function to highlight bold words
+      function highlightBoldWords() {
+        const textToHighlight = document.getElementById("textToHighlight");
+        const boldWords = textToHighlight.getElementsByTagName("strong");
+
+        // Add event listener to the link for hover
+        document
+          .getElementById("highlightLink")
+          .addEventListener("mouseover", function () {
+            // Loop through bold words and add highlight class
+            for (let i = 0; i < boldWords.length; i++) {
+              boldWords[i].classList.add("highlight");
+            }
+          });
+
+        // Remove highlight when mouse leaves the link
+        document
+          .getElementById("highlightLink")
+          .addEventListener("mouseout", function () {
+            // Loop through bold words and remove highlight class
+            for (let i = 0; i < boldWords.length; i++) {
+              boldWords[i].classList.remove("highlight");
+            }
+          });
+      }
+
+      // Call the function to set up highlighting
+      highlightBoldWords();
+    </script>
+  </body>
+</html>

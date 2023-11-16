@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculate Age</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Form to calculate age -->
+    <form id="ageCalculator">
+      <label for="dob">Enter Date of Birth:</label>
+      <input type="date" id="dob" name="dob" />
+      <input type="submit" value="Calculate Age" />
+    </form>
+
+    <!-- Result container -->
+    <div id="result"></div>
+
+    <script>
+      // Function to calculate age based on the provided date of birth
+      function calculateAge(event) {
+        event.preventDefault(); // Prevent form submission
+
+        const dobInput = document.getElementById("dob");
+        const dob = new Date(dobInput.value); // Get the date of birth value from the input field
+
+        // Calculate age
+        const today = new Date();
+        const diff = today - dob; // Difference in milliseconds
+        const ageDate = new Date(diff); // Convert the difference to a date object
+        const calculatedAge = Math.abs(ageDate.getUTCFullYear() - 1970); // Extract the year
+
+        // Display the calculated age in the result container
+        const resultContainer = document.getElementById("result");
+        resultContainer.textContent = `The age is: ${calculatedAge} years old.`;
+      }
+
+      // Attach event listener to the form for calculating age
+      const ageForm = document.getElementById("ageCalculator");
+      ageForm.addEventListener("submit", calculateAge);
+    </script>
+  </body>
+</html>
