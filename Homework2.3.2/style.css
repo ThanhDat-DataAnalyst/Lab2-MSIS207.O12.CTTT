@@ -1,0 +1,25 @@
+/* Add your CSS styles here */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-image: url('cloud.jpg');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock-container {
+    text-align: center;
+    color: #fff;
+}
+
+.clock {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
