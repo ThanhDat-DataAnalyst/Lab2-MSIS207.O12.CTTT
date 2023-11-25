@@ -1,0 +1,29 @@
+/* Style for the body */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+/* Style for the form */
+#ageCalculator {
+  margin-bottom: 20px;
+}
+
+/* Style for the label */
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Style for the input fields */
+input {
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+/* Style for the result container */
+#result {
+  font-weight: bold;
+  color: green;
+  margin-top: 10px;
+}

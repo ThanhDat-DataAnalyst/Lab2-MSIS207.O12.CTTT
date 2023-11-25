@@ -1,0 +1,11 @@
+/* Add your CSS styles here */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+#output-container {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
